@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+
+  <!-- Search + Dropdown -->
+  <div class="top-bar">
+    <input type="text" placeholder="Search Bus" class="search-box" [(ngModel)]="searchText">
+    
+    <select class="dropdown" [(ngModel)]="selectedType">
+      <option value="">Choose Bus Type</option>
+      <option value="Tourist Bus">Tourist Bus</option>
+      <option value="Private Bus">Private Bus</option>
+      <option value="Luxury Bus">Luxury Bus</option>
+      <option value="Deluxe Bus">Deluxe Bus</option>
+    </select>
+  </div>
+
+  <!-- Bus Cards Grid -->
+  <div class="grid">
+    <div class="card" *ngFor="let bus of filteredBuses">
+      <a [routerLink]="['/detail-bus', bus.id]">
+  <img [src]="bus.image">
+</a>
+      <div class="info">
+        <h3>{{ bus.name }}</h3>
+        <p>{{ bus.passengers }} Passengers</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

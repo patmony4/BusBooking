@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Reserve Your <br> Bus <span>Tickets</span> <br> Now</h1>
+
+            <p>
+                Find and book your bus tickets with just a few clicks.
+                We offer a wide range of bus routes and schedules to suit your needs.
+            </p>
+
+            <button class="reserve-btn">Reserve Seat Now</button>
+        </div>
+
+        <div class="hero-bus">
+            <img src="assets/image/bus2.png" alt="Bus Image">
+        </div>
+    </section>
+    <!-- Booking form -->
+    <app-booking-form></app-booking-form>
+
+
+
+    <section class="activities-section">
+        <div class="section-header">
+            <h2>Top Activities</h2>
+            <a href="#" class="view-all">view all</a>
+        </div>
+        <div class="activities-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <a routerLink="/activity"><img src="assets/image/central-market.jpg" alt="Activity"></a>
+                <div class="card-info">
+                    <h3>Central Market | The Cambodian Market</h3>
+                    <p class="location">Phnom Penh</p>
+                    <p class="price">$10.00 <span>/per person</span></p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <a routerLink="/national"><img src="/assets/image/national-museum.jpg" alt="Activity"></a>
+                <div class="card-info">
+                    <h3>Nation Museum: Cambodia Civilization</h3>
+                    <p class="location">Phnom Penh</p>
+                    <p class="price">$6.50 <span>/per</span></p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <a routerLink="/rival"><img src="/assets/image/mekong-river.webp" alt="Activity"></a>
+                <div class="card-info">
+                    <h3>Mekong River: Cambodia River</h3>
+                    <p class="location">Phnom Penh</p>
+                    <p class="price">$5.50 <span>/per</span></p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <a routerLink="/royal"><img src="assets/image/royal-palace.jpg" alt="Activity"></a>
+                <div class="card-info">
+                    <h3>Royal Palace: Palace of Cambodia</h3>
+                    <p class="location">Phnom Penh</p>
+                    <p class="price">$5.00 <span>/per</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

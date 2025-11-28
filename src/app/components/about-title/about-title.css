@@ -1,0 +1,31 @@
+
+
+.box-detail{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box-detail .txt-box{
+    margin-left: 150px;
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+}
+.box-detail .txt-box h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.box-detail .txt-box h3{
+    font-size: 16px;
+    color: #555;
+}
+.box-detail img{
+    width: 50%;
+    margin: auto;
+    object-fit: cover;
+    height: 500px;
+    margin-top: 30px;
+    border-radius: 12px;
+}
+

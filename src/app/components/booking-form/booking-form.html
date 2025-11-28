@@ -1,0 +1,53 @@
+<section class="booking-form">
+  <form [formGroup]="bookingForm" class="form-container">
+
+    <div class="input-group">
+      <label>From</label>
+      <select formControlName="from">
+        <option value="">Select a location</option>
+        <option>Touk Kork</option>
+        <option>Street 2004</option>
+        <option>Chhbar Ompov</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>To</label>
+      <select formControlName="to">
+        <option value="">Select a location</option>
+        <option>Mekong River</option>
+        <option>Central Market</option>
+        <option>National Museum</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Choose Date</label>
+      <input type="date" formControlName="date">
+    </div>
+
+    <div class="input-group">
+      <label>Choose Time</label>
+      <input type="time" formControlName="time">
+    </div>
+
+    <div class="input-group">
+      <label>Total Seat</label>
+      <input type="number" formControlName="seat" placeholder="Enter total seat">
+    </div>
+    <div class="input-group">
+      <label>Price</label>
+      <input type="number" formControlName="price" placeholder="Enter price">
+    </div>
+
+
+    <div class="input-group full">
+      <a routerLink="/pssenger-imformation" routerLinkActive="active"> <button class="check-btn"
+              [disabled]="!bookingForm.valid"
+              (click)="goToStatusPage()">
+        Check Availability
+      </button></a>
+    </div>
+
+  </form>
+</section>

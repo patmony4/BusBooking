@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <div class="container">
+  <!-- LEFT SIDE -->
+<div class="left" *ngIf="name">
+  <img *ngIf="img" [src]="img" class="bus-img" alt="bus image" />
+  <h1>{{ name }} <span class="plate">(Bus Number Plate)</span></h1>
+
+  <div class="rating">⭐⭐⭐⭐⭐ <span>(4.5)</span></div>
+
+  <p class="desc">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit...
+  </p>
+</div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right">
+    <!-- your inputs and seat layout (same as you posted) -->
+    <div class="row">
+      <div class="input-group">
+        <label>From</label>
+        <select>
+          <option>Select a location</option>
+          <option>Touk Kork</option>
+          <option>Street 2004</option>
+          <option>Chhbar Ompov</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>To</label>
+        <select>
+          <option>Select a location</option>
+          <option>Mekong River</option>
+          <option>Central Market</option>
+          <option>National Museum</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row single">
+      <div class="input-group">
+        <label>Bus Time</label>
+        <input type="time" />
+      </div>
+    </div>
+
+    <h3 class="seat-title">Choose a Seat</h3>
+
+    <div class="seat-layout">
+      <div class="seats" *ngFor="let row of seats">
+        <div class="seat" *ngFor="let seat of row"
+             [class.booked]="seat.booked" [class.selected]="seat.selected"
+             (click)="toggleSeat(seat)">
+          <i class="fa-solid fa-couch"></i>
+        </div>
+      </div>
+    </div>
+
+    <p>Selected Seats: {{ selectedCount }}</p>
+
+    <div class="legend">
+      <p><span class="dot available"></span> Available</p>
+      <p><span class="dot booked"></span> Booked</p>
+      <p><span class="dot selected"></span> Selected</p>
+    </div>
+
+    <a routerLink="/pssenger-imformation"><button class="checkout-btn">Proceed to Checkout</button></a>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+.news-section {
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 150px;
+    font-family: "Roboto", sans-serif;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.news-card h2 {
+    margin-top: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+}

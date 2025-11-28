@@ -1,0 +1,115 @@
+<app-about-title></app-about-title>
+<div class="page">
+
+    <!-- LEFT CONTENT -->
+    <div class="left">
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <span class="active">Overview</span>
+        </div>
+
+        <h1>Mekong River: Cambodia River</h1>
+        <p class="subtitle">Short Package</p>
+
+        <!-- Info Icons -->
+        <div class="info-list">
+            <div>📍 Phnom Penh</div>
+            <div>🕒 Every day at 7PM - 8PM</div>
+            <div>⏱️ 90 minutes</div>
+            <div>💲 $ 5.50 per person</div>
+        </div>
+
+        <hr>
+
+        <!-- Description -->
+        <h2>Description</h2>
+        <p class="text collapse" id="descText">
+            Want to spend a night full of entertainments and spectacles? Feast your senses 
+            on a 90-minute spectacle that you will never forget! <br><br>
+            Come and see the amazing performance of Phare Circus' artists, Siem Reap’s most 
+            unique, authentic, top rated evening entertainment. Combining drama, music, 
+            dance and modern circus arts to tell uniquely Cambodian stories, the artists 
+            will astonish you with their energy, emotion, enthusiasm and talent.
+        </p>
+        <button class="toggle-btn" onclick="toggleText('descText', this)">Show Less</button>
+
+        <hr>
+
+        <!-- What is included -->
+        <h2>What is included</h2>
+        <p>Admission Tickets to Seating</p>
+
+        <hr>
+
+        <!-- Notes -->
+        <h2>Notes</h2>
+        <p class="text collapse" id="notesText">
+            Available on Friday and Saturday only at 8 PM (recently). The showtime will 
+            consist of 1 hour, but there will be a previous presentation as an introduction. 
+            There will also be time to meet the artists and take selfies with them. <br><br>
+            The Big Top opens 30 mins before showtime. No entrance allowed after show has 
+            started due to artist safety. The Phare Boutique and Café open 2 hours before 
+            showtime.
+        </p>
+        <button class="toggle-btn" onclick="toggleText('notesText', this)">Show Less</button>
+
+        <hr>
+
+        <!-- Terms -->
+        <h2>Terms & Conditions</h2>
+        <p>
+            <strong>Booking Confirmation</strong> – We endeavour to confirm booking within 
+            24 hours. If unavailable, we will suggest alternative dates or refund you. An 
+            e-ticket with details will be emailed once confirmed. <br><br>
+
+            <strong>Modification & Cancellation Policy</strong> – Confirmed bookings are 
+            non-refundable and non-modifiable. Contact us if assistance is needed.
+        </p>
+
+    </div>
+
+    <!-- RIGHT BOOKING CARD -->
+    <div class="right">
+        <div class="card">
+
+            <label>Date</label>
+                <input type="date">
+
+            <label>Type</label>
+            <select>
+                <option>Section A</option>
+                <option>Section B</option>
+                <option>Section C</option>
+            </select>
+
+            <label>Guest</label>
+            <select>
+                <option>Adult</option>
+                <option>Children (Ages: 0-17)</option>
+            </select>
+
+            <div class="price-box">
+                <h2>Total Price: $ 5.50</h2>
+                <p>1 Adult × $ 5.50 = $ 5.50</p>
+            </div>
+
+            <a routerLink="/pssenger-imformation"><button class="book-btn">Book Now</button></a>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleText(id, btn) {
+        let text = document.getElementById(id);
+        text.classList.toggle("expanded");
+
+        if (text.classList.contains("expanded")) {
+            btn.innerText = "Show Less";
+        } else {
+            btn.innerText = "Show More";
+        }
+    }
+</script>

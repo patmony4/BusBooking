@@ -1,0 +1,57 @@
+/* HERO SECTION */
+.hero {
+    margin-top: 30px;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    background: url('https://www.novotelphnompenhbkk1.com/wp-content/uploads/sites/53/2025/02/Things-to-do-in-Phnom-Penh.jpg');
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.novotelphnompenhbkk1.com/wp-content/uploads/sites/53/2025/02/Things-to-do-in-Phnom-Penh.jpg');
+    /* position: relative; */
+}
+.hero-text {
+    width: 50%;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    line-height: 1.1;
+}
+
+.hero-text h1 span {
+    color: #b983ff;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    max-width: 450px;
+    font-size: 18px;
+}
+
+.reserve-btn {
+    background: #9c4dff;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hero-bus img {
+    width: 650px;
+    margin-left: 250px;
+    margin-top: 300px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating bus animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}

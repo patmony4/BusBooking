@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <p class="note">
+            The company have difference price between local and international travelers,
+            please select your nationality*
+        </p>
+
+        <div class="nationality">
+            <label><input type="radio" name="nation"> Cambodian</label>
+            <label><input type="radio" name="nation"> Non Cambodian</label>
+        </div>
+
+        <div class="tabs">
+            <button class="active">Downstairs</button>
+            <button>Upstairs</button>
+        </div>
+
+        <div class="seat-area">
+
+            <div class="seats">
+                <!-- Row 1 -->
+                <div class="seat"><span>A3</span></div>
+                <div class="seat"><span>A2</span></div>
+                <div class="seat"><span>A1</span></div>
+
+                <!-- Row 2 -->
+                <div class="seat"><span>A6</span></div>
+                <div class="seat"><span>A5</span></div>
+                <div class="seat"><span>A4</span></div>
+
+                <!-- Row 3 -->
+                <div class="seat"><span>A9</span></div>
+                <div class="seat"><span>A8</span></div>
+                <div class="seat"><span>A7</span></div>
+
+                <!-- Row 4 -->
+                <div class="seat"><span>A12</span></div>
+                <div class="seat"><span>A11</span></div>
+                <div class="seat"><span>A10</span></div>
+            </div>
+
+        </div>
+
+        <p class="scroll-msg">Scroll to view more seats.</p>
+
+        <div class="legend">
+            <div><span class="dot available"></span> Available</div>
+            <div><span class="dot selected"></span> Selected</div>
+            <div><span class="dot unavailable"></span> Unavailable</div>
+        </div>
+    </div>
+
+
+
+    <div class="booking-card">
+        <h2>Booking Summary</h2>
+
+        <div class="top-section">
+            <img src="/mnt/data/Screenshot 2025-11-24 024604.png" class="logo" alt="Logo">
+            <div class="bus-info">
+                <h3>Sleeping Bus</h3>
+                <p class="rating">⭐ 3.60 (211)</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="info-row">
+            <span>Destination</span><span>: Phnom Penh - Ho Chi Minh</span>
+        </div>
+        <div class="info-row">
+            <span>Pick Up</span><span>: Khainam Phnom Penh Bus Station</span>
+        </div>
+        <div class="info-row">
+            <span>Drop Off</span><span>: Khainam Ho Chi Minh Office</span>
+        </div>
+        <div class="info-row">
+            <span>Departure Date</span><span>: Tue 25, November 2025</span>
+        </div>
+        <div class="info-row">
+            <span>Departure Time</span><span>: 04:30 – 11:30</span>
+        </div>
+        <div class="info-row">
+            <span>Vehicle Type</span><span>: Sleeping Bus</span>
+        </div>
+        <div class="info-row">
+            <span>Operation</span><span>: Khainam Transport</span>
+        </div>
+
+        <hr>
+
+        <div class="total-row">
+            <strong>Total</strong>
+            <strong>$ 0.00</strong>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="booking-container">
+
+        <h2>Book with confidence. Guaranteed.</h2>
+        <p class="note">You’re covered when you book and pay.</p>
+
+        <ul class="info-list">
+            <li>⚠️ Act fast! Price and availability may change.</li>
+            <li>❌ Non-refundable.</li>
+        </ul>
+
+        <h3>Enter contact information</h3>
+
+      <form [formGroup]="bookingForm" (ngSubmit)="goToStatusPage()">
+
+    <div class="form-row">
+        <input type="text" placeholder="First name" formControlName="firstName">
+        <input type="text" placeholder="Last name" formControlName="lastName">
+    </div>
+
+    <div class="form-row">
+        <select formControlName="gender">
+            <option value="">Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <select formControlName="nationality">
+            <option value="">Select nationality</option>
+            <option value="Non Cambodian">Non Cambodian</option>
+            <option value="Cambodian">Cambodian</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <input type="email" placeholder="Email address" formControlName="email">
+
+        <div class="phone-box">
+            <select class="flag-select" formControlName="countryCode">
+                <option value="+855">🇰🇭</option>
+            </select>
+            <input type="text" class="code" value="+855" disabled>
+        </div>
+
+        <input type="text" placeholder="Phone" formControlName="phone">
+    </div>
+
+    <h3>Include a message remark</h3>
+
+    <p class="small-text">
+        Please let us know if you have any questions or comments on your trip.
+    </p>
+
+    <div class="form-row">
+        <textarea placeholder="Message..." formControlName="message"></textarea>
+
+        <div class="right-hints">
+            <p>Tell the host a little about yourself.</p>
+            <p>What brings you to this area?</p>
+            <p>Who are you traveling with?</p>
+        </div>
+    </div>
+
+    <button class="pay-btn" type="submit"  (click)="onProcessPayment()" [disabled]="bookingForm.invalid">
+        Process to Payment
+    </button>
+    <div class="qr-popup" *ngIf="showQRPopup">
+    <div class="qr-content">
+        <h3>Scan to Pay</h3>
+
+        <img src="assets/image/photo_2025-11-20_13-07-46.jpg" alt="QR Code" width="220">
+
+        <button class="close-btn" (click)="showQRPopup = false">Close</button>
+    </div>
+</div>
+</form>
+
+    </div>
+</body>
+
+</html>

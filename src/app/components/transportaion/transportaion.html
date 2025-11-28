@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <app-booking-form></app-booking-form>
+    <!-- Category Tabs -->
+    <div class="tabs">
+        <button class="active">All</button>
+        <button>Bus</button>
+        <button>Taxi</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Sidebar Filters -->
+        <aside class="filters">
+            <h4>Time</h4>
+            <label><input type="checkbox"> Morning</label>
+            <label><input type="checkbox"> Afternoon</label>
+            <label><input type="checkbox"> Night</label>
+
+            <h4>Operator</h4>
+            <label><input type="checkbox"> Private</label>
+            <label><input type="checkbox"> Family</label>
+            <label><input type="checkbox"> Friend</label>
+        </aside>
+
+        <!-- Results -->
+        <section class="results">
+            <p class="results-count">45 Results</p>
+
+            <!-- Trip Card -->
+            <div class="trip-card">
+                <div class="tag">Feature</div>
+
+                <div class="trip-content">
+                    <div class="operator-info">
+                        <img src="https://storage.camboticket.com/images/1695636599_65115c7781d7d.png?w=1920&q=75"
+                            alt="logo">
+                        <h3>Airbus</h3>
+                        <p>Air Bus (36)</p>
+                        <p class="rating">⭐ 4.53 (355)</p>
+                    </div>
+
+                    <div class="trip-time">
+                        <h2>04:30</h2>
+                        <span>6h 00m</span>
+                        <h2>10:30</h2>
+                        <a href="#" class="trip-info">TRIP INFO</a>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="cashback">Cashback $1.40</p>
+                        <h2>$28.00</h2>
+                        <p class="seats">36 Seats Left</p>
+                        <a routerLink="/cus-booking"><button class="book-btn">Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Another Trip Card -->
+            <div class="trip-card">
+                <div class="tag">Feature</div>
+
+                <div class="trip-content">
+                    <div class="operator-info">
+                        <img src="https://storage.camboticket.com/images/1713951501_6628d30d56af4.png?w=1920&q=75"
+                            alt="logo">
+                        <h3>Capitol</h3>
+                        <p>First Class 21 Seats</p>
+                        <p class="rating">⭐ 4.53 (355)</p>
+                    </div>
+
+                    <div class="trip-time">
+                        <h2>05:00</h2>
+                        <span>6h 00m</span>
+                        <h2>11:00</h2>
+                        <a href="#" class="trip-info">TRIP INFO</a>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="cashback">Cashback $1.75</p>
+                        <h2>$35.00</h2>
+                        <p class="seats">21 Seats Left</p>
+                        <a routerLink="/cus-booking"><button class="book-btn">Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Another Trip Card -->
+            <div class="trip-card">
+                <div class="tag">Feature</div>
+
+                <div class="trip-content">
+                    <div class="operator-info">
+                        <img src="https://storage.camboticket.com/images/1561021697_5d0b4d0171e23.png?w=1920&q=75"
+                            alt="logo">
+                        <h3>Khainam Transport</h3>
+                        <p>First Class 21 Seats</p>
+                        <p class="rating">⭐ 4.53 (355)</p>
+                    </div>
+
+                    <div class="trip-time">
+                        <h2>05:00</h2>
+                        <span>6h 00m</span>
+                        <h2>11:00</h2>
+                        <a href="#" class="trip-info">TRIP INFO</a>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="cashback">Cashback $1.75</p>
+                        <h2>$35.00</h2>
+                        <p class="seats">21 Seats Left</p>
+                        <a routerLink="/cus-booking"><button class="book-btn">Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+</body>
+</html>
